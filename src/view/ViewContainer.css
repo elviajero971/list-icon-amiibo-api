@@ -8,32 +8,28 @@
 }
 
 .viewContainer > .header {
-  align-items: center;
+  
   border-bottom: 2px solid black;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-size: 1.5em;
   font-weight: bolder;
   height: 45px;
+  width: 100%;
   justify-content: center;
-  position: relative;
 }
 
 .viewContainer > .header > .headerText {
-  align-items: center;
   display: flex;
-  height: 100%;
-  left: 0;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .viewContainer > .header > .switch {
   display: flex;
   flex-grow: 1;
-  justify-content: flex-end;
-  align-self: center;
 }
 
 .viewContainer > .header > .switch > span {

@@ -104,12 +104,11 @@ const ViewContainer = () => {
     <div className="viewContainer">
       <div className="header">
         <div className="switch">
-          <span>Card</span>
+          <span>Light</span>
             <SwitchDarkMode 
-              checked={viewMode === "list"}
-              onChange={switchChange}
+              checked={false}
             />
-          <span>List</span>
+          <span>Dark</span>
         </div>
         <div className="headerText">
           {headerText}
