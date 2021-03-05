@@ -1,0 +1,51 @@
+.viewCard {
+  display: flex;
+  flex: none;
+  height: 230px;
+  opacity: 0;
+  padding: 0 10px 10px;
+  transition-duration: .5s;
+  transition-property: opacity;
+  transition-timing-function: linear;
+  width: 170px;
+}
+
+.viewCard.loaded {
+  opacity: 1;
+}
+
+.viewCard > .cardContainer {
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 5px 5px;
+}
+
+.viewCard > .cardContainer > .cardImage {
+  display: flex;
+  flex: 1;
+}
+
+.viewCard > .cardContainer > .cardImage > img {
+  display: flex;
+  flex: 1;
+  object-fit: contain;
+}
+
+.viewCard > .cardContainer > .cardText {
+  align-items: center;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.viewCard > .cardContainer > .cardText > .text {
+  display: block;
+  font-size: 1em;
+  font-weight: bolder;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

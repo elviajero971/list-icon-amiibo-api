@@ -1,0 +1,21 @@
+.spinner {
+  align-items: center;
+  background-color: rgba(0, 0, 128, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.spinner > .container {
+  display: flex;
+  height: 300px;
+  overflow: visible;
+  width: 300px;
+}
+
+.spinner > .container * {
+  display: block;
+  overflow: visible;
+}

@@ -1,0 +1,80 @@
+.viewContainer {
+  background-color: #800040;
+  color: #808000;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.viewContainer > .header {
+  align-items: center;
+  border-bottom: 2px solid black;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bolder;
+  height: 45px;
+  justify-content: center;
+  position: relative;
+}
+
+.viewContainer > .header > .headerText {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.viewContainer > .header > .switch {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.viewContainer > .header > .switch > span {
+  display: flex;
+  padding: 0 10px;
+}
+
+.viewContainer > .view {
+  display: block;
+  height: calc(100% - 45px);
+  overflow-y: scroll;
+
+}
+
+.viewContainer > .view > .scroller {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.listItem {
+  display: flex;
+  padding: 5px 0;
+  
+}
+
+.listItem > img {
+  display: flex;
+  object-fit: contain;
+  width: 110px;
+}
+
+.listItem > .text {
+  align-items: center;
+  display: flex;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
