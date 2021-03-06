@@ -31,13 +31,16 @@ const config = [
 const initialValue = {
   config,
   baseURL,
-  viewMode: "list"
+  viewMode: "list",
+  viewColorMode: "lightMode"
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'setViewMode':
       return {...state, viewMode: action.payload};
+    case 'setViewColorMode':
+      return {...state, viewColorMode: action.payload};
     default:
       return state;
   }

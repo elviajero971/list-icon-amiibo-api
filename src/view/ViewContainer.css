@@ -1,10 +1,19 @@
 .viewContainer {
-  background-color: #800040;
-  color: #808000;
   display: flex;
   flex: 1;
   flex-direction: column;
   z-index: 100;
+}
+
+.viewLightMode {
+  background-color: white;
+  color: black;
+}
+
+.viewDarkMode {
+  background-color: brown;
+  color: white;
+
 }
 
 .viewContainer > .header {
@@ -29,6 +38,8 @@
 
 .viewContainer > .header > .switch {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
 }
 
@@ -41,8 +52,9 @@
   display: block;
   height: calc(100% - 45px);
   overflow-y: scroll;
-
 }
+
+
 
 .viewContainer > .view > .scroller {
   align-items: flex-start;

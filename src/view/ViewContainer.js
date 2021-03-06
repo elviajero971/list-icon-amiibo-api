@@ -17,7 +17,7 @@ const ViewContainer = () => {
   const [headerText, setHeaderText] = useState(defaultHeaderText);
 
   const [reducerState, reducerAction] = AppConfigReducer();
-  const {config, viewMode} = reducerState;
+  const {config, viewMode, viewColorMode} = reducerState;
 
   const [networkState, networkAction] = AppNetworkReducer();
 
@@ -60,6 +60,13 @@ const ViewContainer = () => {
     });
   }
 
+  const switchChangeColor = (checked) => {
+    reducerAction({
+      type: "setViewColorMode",
+      payload: checked ? "lightMode" : "darkMode"
+    });
+  }
+
   const Row = ({ index, style }) => (
     <div style={style}>
       <div className="listItem">
@@ -78,6 +85,16 @@ const ViewContainer = () => {
     </div>
   );
 
+  let viewColorModeDisplay = "viewContainer viewLightMode";
+
+  if (viewColorMode === "darkMode") {
+    viewColorModeDisplay="viewContainer viewDarkMode";
+    
+  }
+
+  console.log("view color mode value: "+viewColorModeDisplay)
+
+  
   let viewModeDisplay = 
     <div className="scroller">
       {cardList}
@@ -99,16 +116,16 @@ const ViewContainer = () => {
     </AutoSizer>
   }
 
-
   return(
-    <div className="viewContainer">
+    <div className={viewColorModeDisplay === "viewContainer viewLightMode" ? "viewContainer viewLightMode" : "viewContainer viewDarkMode"}>
       <div className="header">
         <div className="switch">
-          <span>Light</span>
-            <SwitchDarkMode 
-              checked={false}
-            />
           <span>Dark</span>
+            <SwitchDarkMode 
+              checked={viewColorMode === "lightMode"}
+              onChange={switchChangeColor}
+            />
+          <span>Light</span>
         </div>
         <div className="headerText">
           {headerText}
