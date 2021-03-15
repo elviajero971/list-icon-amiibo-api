@@ -92,7 +92,7 @@ const ViewContainer = () => {
     
   }
 
-  console.log("view color mode value: "+viewColorModeDisplay)
+  
 
   
   let viewModeDisplay = 
